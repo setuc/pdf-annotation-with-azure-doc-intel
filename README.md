@@ -4,7 +4,7 @@
 
 This project is a web application that processes PDF documents by overlaying annotations based on analysis results from Azure Document Intelligence. Specifically, it utilizes the **General Document Layout** and **Key Value Pairs** features to extract information from documents and visually represent that data on the original PDF.
 
-Users can upload a PDF document and a corresponding JSON file containing the analysis results. The application processes these files and returns a new PDF with annotations highlighting the extracted data.
+Users can upload a PDF document and a corresponding JSON file containing the analysis results. The application processes these files and returns a new PDF with annotations highlighting the extracted data. **Confidence scores for each extracted element are visually represented as color-coded bars next to the annotations, providing a quick visual indication of the recognition confidence.**
 
 ![Application Screenshot](./images/Layout.jpeg) <!-- Replace with the path to your screenshot image -->
 
@@ -128,7 +128,7 @@ This command starts the Vite development server. The application should be acces
 
 ### Uploading Files
 
-- **PDF Document**: Click on the PDF upload area or drag and drop a PDF file.
+- **PDF Document**: Click on the PDF upload area or drag and drop a PDF file. There is a sample pdf and its correspoding json file in the examples directory of the project.
 - **JSON Analysis**: Click on the JSON upload area or drag and drop a JSON file containing the analysis result from Azure Document Intelligence.
 
 ### Processing and Viewing Results
@@ -194,6 +194,7 @@ Key Functions:
   ```
 
 - **Utility Functions**:
+   **Confidence Indicators**: For each key-value pair, the backend draws a color-coded bar next to the annotation on the PDF to represent its confidence score, offering visual feedback on the accuracy of the recognition.
   - `generate_distinct_colors`: Generates colors for annotations.
   - `draw_confidence_indicator`: Draws a confidence indicator bar on the PDF.
 
