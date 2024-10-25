@@ -1,3 +1,7 @@
+Sure! Here is the updated **README.md** file with instructions on running the Python script directly using the added files `markup_pdf.py` and `requirements.txt`.
+
+---
+
 # Azure Document Intelligence Result Processor
 
 ## Overview
@@ -24,12 +28,16 @@ Users can upload a PDF document and a corresponding JSON file containing the ana
   - [Running the Application](#running-the-application)
     - [1. Start the Backend (Azure Functions)](#1-start-the-backend-azure-functions)
     - [2. Start the Frontend (React Application)](#2-start-the-frontend-react-application)
+  - [Running the Python Script Directly](#running-the-python-script-directly)
+    - [1. Install Python Dependencies](#1-install-python-dependencies)
+    - [2. Run the Script](#2-run-the-script)
   - [Usage](#usage)
     - [Uploading Files](#uploading-files)
     - [Processing and Viewing Results](#processing-and-viewing-results)
   - [Application Structure](#application-structure)
     - [Frontend (`App.tsx`)](#frontend-apptsx)
     - [Backend (`function_app.py`)](#backend-function_apppy)
+    - [Python Script (`markup_pdf.py`)](#python-script-markup_pdfpy)
   - [Configuration Details](#configuration-details)
     - [Vite Proxy Configuration](#vite-proxy-configuration)
     - [Alias Configuration](#alias-configuration)
@@ -42,6 +50,7 @@ Users can upload a PDF document and a corresponding JSON file containing the ana
 - **PDF Upload**: Upload any PDF document for processing.
 - **JSON Upload**: Upload the analysis result JSON file from Azure Document Intelligence.
 - **Visual Annotations**: The processed PDF displays key-value pairs, tables, and paragraphs annotated directly on the document.
+- **Confidence Indicators**: For each key-value pair, the backend draws a color-coded bar next to the annotation on the PDF to represent its confidence score, offering visual feedback on the accuracy of the recognition.
 - **PDF Viewer**: View the original and processed PDFs directly within the application.
 - **Download Processed PDF**: Download the annotated PDF for offline viewing or sharing.
 
@@ -49,7 +58,8 @@ Users can upload a PDF document and a corresponding JSON file containing the ana
 
 - **Node.js and npm**: [Download and install Node.js](https://nodejs.org/en/download/), which includes npm.
 - **Azure Functions Core Tools**: [Install Azure Functions Core Tools](https://docs.microsoft.com/azure/azure-functions/functions-run-local#install-the-azure-functions-core-tools) to run Azure Functions locally.
-- **Python 3.8+**: The backend is written in Python, so you'll need Python installed. [Download Python](https://www.python.org/downloads/).
+- **Python 3.8+**: The backend and the standalone script are written in Python, so you'll need Python installed. [Download Python](https://www.python.org/downloads/).
+- **pip**: Ensure that pip is installed for managing Python packages.
 
 ## Setup Instructions
 
@@ -124,11 +134,59 @@ This command starts the Vite development server. The application should be acces
 
 **Note**: Ensure both the frontend and backend servers are running simultaneously for the application to function properly.
 
+## Running the Python Script Directly
+
+If you prefer to run the PDF annotation process without the web application, you can use the provided Python script `markup_pdf.py`. This script allows you to process PDFs directly from the command line using a JSON file containing the Azure Document Intelligence analysis results.
+
+### 1. Install Python Dependencies
+
+Navigate to the `python` directory where the script and requirements are located:
+
+```bash
+cd python
+```
+
+Create a virtual environment and activate it:
+
+```bash
+python -m venv .venv
+# On Windows:
+.\.venv\Scripts\activate
+# On macOS/Linux:
+source .venv/bin/activate
+```
+
+Install the required packages from `requirements.txt`:
+
+```bash
+pip install -r requirements.txt
+```
+
+### 2. Run the Script
+
+You can run the `markup_pdf.py` script by providing the input PDF file, the JSON file containing the analysis results, and the desired output PDF file path.
+
+```bash
+python markup_pdf.py input.pdf analysis_results.json output.pdf
+```
+
+Replace `input.pdf` with the path to your original PDF document, `analysis_results.json` with the path to your JSON analysis file, and `output.pdf` with the desired path for the processed PDF.
+
+**Example:**
+
+```bash
+python markup_pdf.py ../examples/sample_document.pdf ../examples/analysis_results.json processed_document.pdf
+```
+
+**Note:** Ensure that the input files exist and the output path is writable.
+
+The script will process the PDF document, annotate it with the extracted data from the JSON file, and save the annotated PDF at the specified output path.
+
 ## Usage
 
 ### Uploading Files
 
-- **PDF Document**: Click on the PDF upload area or drag and drop a PDF file. There is a sample pdf and its correspoding json file in the examples directory of the project.
+- **PDF Document**: Click on the PDF upload area or drag and drop a PDF file. There is a sample PDF and its corresponding JSON file in the `examples` directory of the project.
 - **JSON Analysis**: Click on the JSON upload area or drag and drop a JSON file containing the analysis result from Azure Document Intelligence.
 
 ### Processing and Viewing Results
@@ -149,15 +207,15 @@ Key Components and Functions:
 - **State Management**: Manages states for the uploaded files, processing status, and PDF viewing parameters.
 - **File Upload Handlers**: Functions to handle file uploads for both PDF and JSON files.
 - **Process Files Function**: Sends the uploaded files to the backend API for processing.
-  
+
   ```tsx
   const processFiles = React.useCallback(async () => {
     // ... Handles sending files to the backend and updating the state based on the response.
   }, [pdfState.file, jsonState.file]);
   ```
-  
+
 - **React PDF Viewer**: Displays the processed PDF using the `react-pdf` library.
-  
+
   ```tsx
   <ReactPDF.Document
     file={processedPdf || pdfState.preview}
@@ -179,7 +237,7 @@ Located at `api/function_app.py`, this file contains the Azure Function that pro
 Key Functions:
 
 - **`process_form` Function**: The main entry point for the Azure Function, handling HTTP requests to the `/api/parse_form` endpoint.
-  
+
   ```python
   @app.route(route="parse_form", methods=["POST"], auth_level=func.AuthLevel.FUNCTION)
   def process_form(req: func.HttpRequest) -> func.HttpResponse:
@@ -187,14 +245,13 @@ Key Functions:
   ```
 
 - **`process_pdf` Function**: Processes the PDF by annotating it based on the JSON data.
-  
+
   ```python
   def process_pdf(pdf_data: bytes, json_data: dict) -> bytes:
       # ... Loads the PDF, adds annotations, and returns the modified PDF.
   ```
 
 - **Utility Functions**:
-   **Confidence Indicators**: For each key-value pair, the backend draws a color-coded bar next to the annotation on the PDF to represent its confidence score, offering visual feedback on the accuracy of the recognition.
   - `generate_distinct_colors`: Generates colors for annotations.
   - `draw_confidence_indicator`: Draws a confidence indicator bar on the PDF.
 
@@ -207,6 +264,24 @@ Processing Steps:
    - Draws confidence indicators based on the confidence scores.
    - Processes tables and paragraphs similarly.
 4. **Return Modified PDF**: Saves the annotated PDF to a bytes stream and returns it encoded in base64.
+
+### Python Script (`markup_pdf.py`)
+
+Located at `python/markup_pdf.py`, this standalone Python script allows you to process PDF documents directly, without running the web application or Azure Functions.
+
+Key Features:
+
+- **Command-Line Interface**: Accepts command-line arguments for input PDF, input JSON, and output PDF paths.
+- **Logging**: Uses `coloredlogs` for enhanced logging output, providing detailed information during processing.
+- **Processing Logic**: Processes the PDF by annotating it based on the JSON data, similar to the backend function.
+
+Usage:
+
+```bash
+python markup_pdf.py input.pdf analysis_results.json output.pdf
+```
+
+Ensure that `requirements.txt` in the same directory is used to install the required packages (`PyMuPDF` and `coloredlogs`).
 
 ## Configuration Details
 
@@ -249,6 +324,7 @@ resolve: {
 - **Port Conflicts**: Make sure ports `7071` (backend) and `3000` (frontend) are available. If not, update the configurations accordingly.
 - **CORS Issues**: The backend sets `Access-Control-Allow-Origin` to `*` to allow cross-origin requests. Ensure this is configured properly if modifying the backend.
 - **PDF Rendering Issues**: If PDFs are not displaying, verify that the `pdfjs` worker is configured correctly in `App.tsx`.
+- **Script Errors**: When running `markup_pdf.py`, ensure that the input files exist and are accessible, and that all required Python packages are installed.
 
 ## Helpful Resources
 
@@ -261,14 +337,24 @@ resolve: {
   - [PyMuPDF (fitz)](https://pymupdf.readthedocs.io/en/latest/)
 - **Azure Functions**:
   - [Develop Azure Functions using Visual Studio Code](https://docs.microsoft.com/azure/azure-functions/functions-develop-vs-code?tabs=csharp)
+- **Python Logging**:
+  - [Colored Logs Documentation](https://coloredlogs.readthedocs.io/en/latest/)
 
 ## Contact Information
 
-For any questions or assistance, please open an ticket:
+For any questions or assistance, please open an issue:
 
 - **GitHub Issues**: [Link to the repository's issues page]
 
 ---
 
-By following these instructions, you should be able to run the Document Intelligence Result Processor application locally. Enjoy enhancing your document processing workflows!
+By following these instructions, you should be able to run the Document Intelligence Result Processor application locally, either through the web application or directly via the Python script. Enjoy enhancing your document processing workflows!
 
+---
+
+**Files Added:**
+
+- `markup_pdf.py`: The Python script for annotating PDFs directly from the command line.
+- `requirements.txt`: The Python dependencies required to run `markup_pdf.py`.
+
+**Note:** The new `python` directory contains the added files and is structured to keep the standalone script and its dependencies organized separately from the web application's backend.

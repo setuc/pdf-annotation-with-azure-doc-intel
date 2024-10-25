@@ -1,0 +1,2 @@
+PyMuPDF>=1.21.1
+coloredlogs>=15.0.1
