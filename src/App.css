@@ -1,0 +1,57 @@
+/* src/App.css */
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.controls {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.controls button {
+  padding: 8px 16px;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.controls button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.controls select {
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.pdf-container {
+  position: relative;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.error {
+  color: red;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #ffe6e6;
+  border-radius: 4px;
+}
+
+.bounding-box {
+  transition: all 0.2s ease-in-out;
+}
+
+.bounding-box:hover {
+  background-color: rgba(0, 0, 255, 0.2);
+}

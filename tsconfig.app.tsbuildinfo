@@ -1,0 +1,1 @@
+{"root":["./src/App.tsx","./src/declarations.d.ts","./src/main.tsx","./src/vite-env.d.ts","./src/components/ui/loader.tsx","./src/lib/pdf-config.ts","./src/lib/utils.ts","./src/types/react-pdf.d.ts"],"errors":true,"version":"5.6.3"}
