@@ -66,17 +66,15 @@ Users can upload a PDF document and a corresponding JSON file containing the ana
 ### 1. Clone the Repository
 
 ```bash
-git clone [repository-url]
+git clone https://github.com/setuc/pdf-annotation-with-azure-doc-intel.git
 ```
-
-Replace `[repository-url]` with the URL of your repository.
 
 ### 2. Install Frontend Dependencies
 
 Navigate to the root directory of the project:
 
 ```bash
-cd [project-directory]
+cd pdf-annotation-with-azure-doc-intel
 ```
 
 Install the frontend dependencies:
