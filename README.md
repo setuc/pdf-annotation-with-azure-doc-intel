@@ -1,7 +1,3 @@
-Sure! Here is the updated **README.md** file with instructions on running the Python script directly using the added files `markup_pdf.py` and `requirements.txt`.
-
----
-
 # Azure Document Intelligence Result Processor
 
 ## Overview
@@ -342,7 +338,7 @@ resolve: {
 
 For any questions or assistance, please open an issue:
 
-- **GitHub Issues**: [Link to the repository's issues page]
+- **GitHub Issues**: [Link](https://github.com/setuc/pdf-annotation-with-azure-doc-intel/issues)
 
 ---
 
