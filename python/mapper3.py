@@ -3,8 +3,6 @@ import os
 import re
 import difflib
 import numpy as np
-import json
-import numpy as np
 from scipy.optimize import linear_sum_assignment
 from typing import List, Tuple, Dict, Optional
 import logging
@@ -31,7 +29,34 @@ from rich.logging import RichHandler
 from rich.console import Console
 from rich.table import Table
 from rich.columns import Columns
-from rich.progress import Progress
+from rich.progress import Progress, SpinnerColumn, TextColumn
+
+# ------------------------------------------------------------------------------
+# Custom JSON Encoder to handle NumPy types
+# ------------------------------------------------------------------------------
+class NumpyEncoder(json.JSONEncoder):
+    """
+    Custom encoder to convert NumPy data types (e.g. float32, bool) to native Python types.
+    """
+    def default(self, obj):
+        if isinstance(obj, (np.float16, np.float32, np.float64)):
+            return float(obj)
+        if isinstance(obj, (np.int_, np.int16, np.int32, np.int64)):
+            return int(obj)
+        if isinstance(obj, (np.bool_)):
+            return bool(obj)
+        return super().default(obj)
+
+def save_matches_to_json(matches: Dict[str, dict], output_path: str) -> None:
+    """
+    Save the final matches to a JSON file, converting NumPy types to native Python types.
+    """
+    try:
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump(matches, f, indent=2, cls=NumpyEncoder)
+        console.print(f"[bold green]Saved matches to {output_path}[/bold green]")
+    except Exception as e:
+        logger.exception(f"Error saving matches to {output_path}: {e}")
 
 # ------------------------------------------------------------------------------
 # Configure Logging with RichHandler
@@ -48,7 +73,6 @@ console = Console()
 # ------------------------------------------------------------------------------
 # 0. Helper: Composite Field Text
 # ------------------------------------------------------------------------------
-
 def composite_field_text(field_key: str, field_value: str) -> str:
     """
     Create a composite text using the field key and field value.
@@ -98,7 +122,7 @@ def compute_similarity_matrix(
     n = len(field_texts)
     m = len(candidate_texts)
     sim_matrix = np.zeros((n, m), dtype=np.float32)
-
+    
     if similarity_method in ["sentence_transformers", "hybrid"]:
         global st_model
         if st_model is None:
@@ -192,7 +216,6 @@ def adjust_similarity_for_domain(field_key: str, sim: float) -> float:
 # ------------------------------------------------------------------------------
 # 2. Utilities to Load and Flatten JSON
 # ------------------------------------------------------------------------------
-
 def load_json(file_path: str) -> dict:
     try:
         logger.debug(f"Loading JSON from: {file_path}")
@@ -219,7 +242,6 @@ def flatten_json(nested_json: dict, parent_key: str = "", sep: str = ".") -> dic
 # ------------------------------------------------------------------------------
 # 3. Extract Fields from JSON-1 *Without* Hardcoding
 # ------------------------------------------------------------------------------
-
 def extract_fields_from_json1(json1: dict, max_fields: Optional[int] = 20) -> List[Tuple[str, str]]:
     flattened = flatten_json(json1)
     non_empty = {k: v for k, v in flattened.items() if v.strip()}
@@ -233,7 +255,6 @@ def extract_fields_from_json1(json1: dict, max_fields: Optional[int] = 20) -> Li
 # ------------------------------------------------------------------------------
 # 3.5 Parse Document Intelligence JSON
 # ------------------------------------------------------------------------------
-
 def parse_doc_intelligence_json(doc_json: dict) -> dict:
     """
     Parse the top-level structure of the Document Intelligence JSON.
@@ -244,7 +265,6 @@ def parse_doc_intelligence_json(doc_json: dict) -> dict:
 # ------------------------------------------------------------------------------
 # 4. Extract Candidates from Document Intelligence JSON (all sources)
 # ------------------------------------------------------------------------------
-
 def extract_all_candidates(analyze_result: dict) -> List[Tuple[str, str, dict]]:
     """
     Extract candidate text from various parts of the Document Intelligence JSON.
@@ -281,7 +301,6 @@ def extract_all_candidates(analyze_result: dict) -> List[Tuple[str, str, dict]]:
 # ------------------------------------------------------------------------------
 # 5. Matching Algorithms
 # ------------------------------------------------------------------------------
-
 def hungarian_matching(
     fields: List[Tuple[str, str]], 
     candidates: List[Tuple[str, str, dict]], 
@@ -319,7 +338,6 @@ def hungarian_matching(
     for i, j in zip(row_ind, col_ind):
         sim = sim_matrix[i, j]
         review = sim < threshold
-        # Use the original field key and value from fields (which is a tuple)
         f_key = fields[i][0]
         f_value = fields[i][1]
         matches[f_key] = {
@@ -389,7 +407,6 @@ def gale_shapley_matching(
 # ------------------------------------------------------------------------------
 # 6. High-Level Function to Do It All Dynamically (with user feedback)
 # ------------------------------------------------------------------------------
-
 def match_jsons_dynamic(
     json1_path: str,
     json2_path: str,
@@ -412,7 +429,7 @@ def match_jsons_dynamic(
         except Exception as e:
             logger.exception("Error loading JSON files.")
             raise
-    
+        
         fields = extract_fields_from_json1(structured_data, max_fields=max_fields)
         analyze_result = parse_doc_intelligence_json(doc_intelligence_data)
         candidates = extract_all_candidates(analyze_result)
@@ -429,27 +446,27 @@ def match_jsons_dynamic(
     
     elapsed = time.time() - start_time
     logger.debug(f"Dynamic matching completed in {elapsed:.2f} seconds.")
-    
-    # Print a note to the user
-    console.print(f"[bold yellow]First pass completed[/bold yellow]. Found [bold]{len(matches)}[/bold] matches.")
-    # Output metrics: how many require review
+    console.print(f"[bold yellow]First pass completed.[/bold yellow] Found [bold]{len(matches)}[/bold] matches.")
     flagged = sum(1 for m in matches.values() if m["human_review"])
     console.print(f"[blue]Number requiring review:[/blue] [bold red]{flagged}[/bold red].")
     
-    # Check if any matches have extremely low similarity
+    # Warn if any match is extremely low or if a field with digits gets a candidate without digits
+    def contains_digit(text: str) -> bool:
+        return any(ch.isdigit() for ch in text)
+    
     for k, m in matches.items():
         if m["similarity"] < 0.2:
             logger.warning(f"Field '{k}' has extremely low similarity ({m['similarity']:.2f}). Possibly missing in Document Intelligence or GPT JSON.")
+        # If the field value has digits but candidate text does not, warn the user.
+        if contains_digit(m["field_value"]) and not contains_digit(m["candidate_text"]):
+            logger.warning(f"Field '{k}' appears to be numeric but the candidate text '{m['candidate_text']}' may be missing numeric information.")
     
-    # Additional message after the pass
     console.print("[bold green]Finalizing results...[/bold green]")
-    
     return fields, candidates, matches
 
 # ------------------------------------------------------------------------------
 # 7. Human-in-the-Loop and Feedback (Refinement for Human Review)
 # ------------------------------------------------------------------------------
-
 def refine_human_review_matches(
     matches: Dict[str, dict],
     fields: List[Tuple[str, str]],
@@ -501,36 +518,48 @@ def refine_human_review_matches(
     return refined
 
 # ------------------------------------------------------------------------------
-# 7.5 Save Output to JSON
+# 7.5 Multi-Pass Approach
 # ------------------------------------------------------------------------------
+def multi_pass_dynamic_matching(
+    json1_path: str,
+    json2_path: str,
+    max_fields: Optional[int] = 20,
+    algorithm: str = "greedy",
+    threshold: float = 0.7,
+    similarity_method: str = "hybrid",
+    weight_char: float = 0.5,
+    weight_other: float = 0.5,
+    dynamic_threshold: bool = False,
+    dynamic_offset: float = 0.1
+) -> Tuple[List[Tuple[str, str]], List[Tuple[str, str, dict]], Dict[str, dict]]:
+    # First pass
+    fields, candidates, matches = match_jsons_dynamic(
+        json1_path=json1_path,
+        json2_path=json2_path,
+        max_fields=max_fields,
+        algorithm=algorithm,
+        threshold=threshold,
+        similarity_method=similarity_method,
+        weight_char=weight_char,
+        weight_other=weight_other,
+        dynamic_threshold=dynamic_threshold,
+        dynamic_offset=dynamic_offset
+    )
+    # Second pass refinement with a slightly looser threshold
+    refined = refine_human_review_matches(
+        matches,
+        fields,
+        candidates,
+        threshold=threshold - 0.05,
+        similarity_method=similarity_method,
+        weight_char=weight_char,
+        weight_other=weight_other
+    )
+    return fields, candidates, refined
 
-class NumpyEncoder(json.JSONEncoder):
-    """
-    Custom encoder to convert NumPy data types (e.g., float32, bool) to native Python types.
-    """
-    def default(self, obj):
-        if isinstance(obj, (np.float16, np.float32, np.float64)):
-            return np.float64(obj)
-        if isinstance(obj, (np.int_, np.int16, np.int32, np.int64)):
-            return int(obj)
-        if isinstance(obj, (np.bool_)):
-            return bool(obj)
-        return super().default(obj)
-
-def save_matches_to_json(matches: Dict[str, dict], output_path: str) -> None:
-    """
-    Save the final matches to a JSON file, converting NumPy types to native Python types.
-    """
-    try:
-        with open(output_path, "w", encoding="utf-8") as f:
-            json.dump(matches, f, indent=2, cls=NumpyEncoder)
-        console.print(f"[bold green]Saved matches to {output_path}[/bold green]")
-    except Exception as e:
-        logger.exception(f"Error saving matches to {output_path}: {e}")
 # ------------------------------------------------------------------------------
 # 8. Visualization Helpers using Rich Tables
 # ------------------------------------------------------------------------------
-
 def display_side_by_side_tables(fields: List[Tuple[str, str]], 
                                 candidates: List[Tuple[str, str, dict]], 
                                 matches: Dict[str, dict]):
@@ -573,11 +602,6 @@ def display_side_by_side_tables(fields: List[Tuple[str, str]],
     console.print(table_matches)
 
 def display_match_review_tables(matches: Dict[str, dict]) -> None:
-    """
-    Display two separate tables:
-      - One for matches that require human review.
-      - One for accepted (non-flagged) matches.
-    """
     console = Console()
     flagged = {k: v for k, v in matches.items() if v["human_review"]}
     accepted = {k: v for k, v in matches.items() if not v["human_review"]}
@@ -623,14 +647,13 @@ def display_match_review_tables(matches: Dict[str, dict]) -> None:
 # ------------------------------------------------------------------------------
 # 9. Example Main Usage
 # ------------------------------------------------------------------------------
-
 if __name__ == "__main__":
     json1_file = os.path.join(os.getcwd(), "../examples/Connecticut.gpt.json")
     json2_file = os.path.join(os.getcwd(), "../examples/Connecticut.layout.json")
     
     try:
-        # 1) Do the normal matching
-        fields, candidates, matches = match_jsons_dynamic(
+        # Multi-pass matching with feedback and spinner.
+        fields, candidates, matches_refined = multi_pass_dynamic_matching(
             json1_path=json1_file,
             json2_path=json2_file,
             max_fields=None,
@@ -643,20 +666,27 @@ if __name__ == "__main__":
             dynamic_offset=0.1
         )
         
-        # 2) Refine flagged matches
-        matches_refined = refine_human_review_matches(matches, fields, candidates,
-                                                      threshold=0.7,
-                                                      similarity_method="hybrid",
-                                                      weight_char=0.5,
-                                                      weight_other=0.5)
-        
-        # 3) Display results
         display_side_by_side_tables(fields, candidates, matches_refined)
         display_match_review_tables(matches_refined)
         
-        # 4) Save final matches to a JSON file
+        # Save final matches to JSON output
         output_file = os.path.join(os.getcwd(), "matched_results.json")
         save_matches_to_json(matches_refined, output_file)
+        
+        # Output metrics
+        total_matches = len(matches_refined)
+        flagged_count = sum(1 for m in matches_refined.values() if m["human_review"])
+        console.print(f"[bold blue]Total Matches:[/bold blue] {total_matches}")
+        console.print(f"[bold blue]Matches Requiring Review:[/bold blue] {flagged_count}")
+        
+        # Additional note: If a field seems numeric but the candidate text does not contain digits,
+        # warn the user that Document Intelligence may have missed the value.
+        def contains_digit(text: str) -> bool:
+            return any(ch.isdigit() for ch in text)
+        
+        for k, m in matches_refined.items():
+            if contains_digit(m["field_value"]) and not contains_digit(m["candidate_text"]):
+                console.print(f"[bold red]Warning:[/bold red] Field '{k}' appears numeric ('{m['field_value']}') but candidate text '{m['candidate_text']}' lacks digits. Check if the value is missing in the Document Intelligence or GPT JSON.")
         
     except Exception as e:
         logger.exception(f"An error occurred during matching: {e}")
