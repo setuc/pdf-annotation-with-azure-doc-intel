@@ -1,2 +1,7 @@
 PyMuPDF>=1.21.1
 coloredlogs>=15.0.1
+numpy==2.2.3 
+scipy==1.15.2
+scikit-learn==1.6.1
+rich==13.9.4
+sentence-transformers==3.4.1

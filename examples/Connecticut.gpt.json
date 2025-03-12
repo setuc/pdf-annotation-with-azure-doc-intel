@@ -1,0 +1,181 @@
+{  
+  "metadata": {  
+    "title": "Retail Installment Contract Simple Finance Charge",  
+    "form_number": "553-CT 10/23",  
+    "page": "8/23"  
+  },  
+  "buyer_information": {  
+    "name": "John Doe",  
+    "address": "123 Main St, Springfield, IL 62701",  
+    "phone": "555-1234",  
+    "email": "johndoe@email.com"  
+  },  
+  "co_buyer_information": {  
+    "name": "Jane Doe",  
+    "address": "123 Main St, Springfield, IL 62701",  
+    "phone": "",  
+    "email": ""  
+  },  
+  "seller_creditor_information": {  
+    "name": "ABC Motors",  
+    "address": "456 Commerce Blvd, Springfield, IL 62701",  
+    "phone": "",  
+    "email": ""  
+  },  
+  "vehicle_information": {  
+    "new_used_demo": "New",  
+    "year": 2024,  
+    "make_and_model": "Toyota Camry",  
+    "vehicle_identification_number": "1HGBH41JXMN109186",  
+    "primary_use_for_which_purchased": "Personal, family, or household use",  
+    "primary_use_for_which_purchased_other": "",  
+    "primary_use_for_which_purchased_agricultural": false  
+  },  
+  "finance_information": {  
+    "annual_percentage_rate": "5.99%",  
+    "finance_charge": "$3,500.00",  
+    "amount_financed": "$20,000.00",  
+    "total_of_payments": "$23,500.00",  
+    "total_sale_price": "$25,000.00",  
+    "monthly_payment": "$391.67",  
+    "number_of_payments": 60,  
+    "first_payment_due": "11/01/2024"  
+  },  
+  "late_charge": {  
+    "days_after_due": 10,  
+    "amount": "$10.00",  
+    "percent_of_payment": "5%"  
+  },  
+  "prepayment": {  
+    "allowed": true,  
+    "penalty": false  
+  },  
+  "security_interest": {  
+    "description": "You are giving a security interest in the vehicle being purchased."  
+  },  
+  "additional_information": {  
+    "description": "See this contract for more information including information about nonpayment, default, any required repayment in full before the scheduled date and security interest."  
+  },  
+  "itemization_of_amount_financed": {  
+    "cash_price": {  
+      "amount_including_sales_tax": "$",  
+      "other": "$",  
+      "total": "$"  
+    },  
+    "total_downpayment": {  
+      "trade_in": {  
+        "year": 2021,  
+        "make": "Honda Accord",  
+        "model": "",  
+        "gross_trade_in_allowance": "$5000",  
+        "less_pay_off_made_by_seller_to": "$3500",  
+        "equals_net_trade_in": "$1500",  
+        "cash": "$1500",  
+        "other": "$",  
+        "other_amount": "$",  
+        "total_downpayment": "$2000"  
+      }  
+    },  
+    "unpaid_balance_of_cash_price": "$20000",  
+    "other_charges_including_amounts_paid_to_others_on_your_behalf": {  
+      "optional_credit_insurance": {  
+        "credit_life": "$100",  
+        "disability": "$"  
+      },  
+      "vendor_single_interest_insurance_paid_to_insurance_company": "$",  
+      "other_optional_insurance_paid_to_insurance_company_or_companies": "$",  
+      "optional_gap_contract": "$200",  
+      "official_fees_paid_to_government_agencies": {  
+        "government_taxes_not_included_in_cash_price": "$",  
+        "government_license_and_registration_fees": "$"  
+      },  
+      "other_charges": {  
+        "for_prior_credit_or_lease_balance": "$",  
+        "for": "$",  
+        "for": "$",  
+        "for": "$",  
+        "total_other_charges_and_amounts_paid_to_others_on_your_behalf": "$20300"  
+      }  
+    },  
+    "amount_financed": "$20300"  
+  },  
+  "option": {  
+    "description": "You pay no finance charge if the Amount Financed, item 5, is paid in full on or before ________________, Year ________________.",  
+    "seller_initials": ""  
+  },  
+  "insurance": {  
+    "credit_life_insurance_company_name": "XYZ Insurance",  
+    "home_office_address": "789 Insurance Ln, Springfield, IL 62701",  
+    "optional_credit_insurance": {  
+      "credit_life": true,  
+      "credit_disability": true,  
+      "credit_life_and_credit_disability": false,  
+      "cost": "$73.65"  
+    },  
+    "other_optional_insurance": {  
+      "type_of_insurance": "",  
+      "term": "",  
+      "premium": "$",  
+      "insurance_company_name": "",  
+      "home_office_address": ""  
+    }  
+  },  
+  "returned_payment_charge": {  
+    "charge_amount": "$20",  
+    "description": "If the cash price of the vehicle is more than $75,000.00, you agree to pay a charge of $20 if any check you give us is dishonored or any electronic payment is returned unpaid."  
+  },  
+  "buyer_signature": {  
+    "buyer_signature": "X",  
+    "date": "",  
+    "co_buyer_signature": "X",  
+    "date": ""  
+  },  
+  "optional_gap_contract": {  
+    "term": "",  
+    "months": ""  
+  },  
+  "buyer_signature_gap_contract": {  
+    "buyer_signature": "X"  
+  },  
+  "additional_terms": {  
+    "annual_percentage_rate_negotiable": true,  
+    "seller_may_assign_contract": true,  
+    "seller_retains_interest": true  
+  },  
+  "change_of_contract_terms": {  
+    "buyer_signature": "X",  
+    "co_buyer_signature": "X"  
+  },  
+  "important_agreements": {  
+    "agreement_1": "You agree to the terms of this contract. You confirm that before you signed this contract, we gave it to you, and you were free to take it and review it. You confirm that you received a true and completely filled-in copy when you signed it.",  
+    "agreement_2": "NOTICE TO THE BUYER: 1. Do not sign this contract before you read it or if it contains any blank space. 2. You are entitled to a completely filled-in copy of the contract when you sign it. 3. Under the law, you have the following rights, among others: (a) to pay off in advance the full amount due and obtain a partial refund of any unearned finance charge; (b) to refinance the amount financed on this contract; (c) to require, under certain conditions, a resale of the property if repossessed."  
+  },  
+  "buyer_information_secondary": {  
+    "buyer_signature": "X",  
+    "date": "",  
+    "co_buyer_signature": "X",  
+    "date": "",  
+    "buyer_printed_name": "",  
+    "title": "",  
+    "co_buyer_printed_name": "",  
+    "title": "",  
+    "co_buyers_and_other_owners": {  
+      "description": "A co-buyer is a person who is responsible for paying the entire debt. An other owner is a person whose name is on the title to the vehicle but does not have to pay the debt. The other owner agrees to the security interest in the vehicle given to us in this contract.",  
+      "other_owner_signature": "X",  
+      "address": "",  
+      "date": ""  
+    },  
+    "seller_signature": {  
+      "signature": "X",  
+      "title": ""  
+    }  
+  },  
+  "assignee_information": {  
+    "assigned_without_recourse": true,  
+    "assigned_with_limited_recourse": false,  
+    "name_of_assignee": "",  
+    "title": "",  
+    "seller_signature": "X",  
+    "title": ""  
+  }  
+}  
