@@ -1,0 +1,1676 @@
+{
+  "metadata.title": {
+    "field_value": "Retail Installment Contract Simple Finance Charge",
+    "candidate_id": "paragraphs_cand_132",
+    "candidate_text": "RETAIL INSTALLMENT CONTRACT SIMPLE FINANCE CHARGE",
+    "similarity": 0.8726978302001953,
+    "human_review": false,
+    "metadata": {
+      "source": "paragraphs",
+      "role": "title",
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            3.0679,
+            0.8184,
+            5.3978,
+            0.8135,
+            5.3985,
+            1.1289,
+            3.0686,
+            1.1338
+          ]
+        }
+      ]
+    }
+  },
+  "metadata.form_number": {
+    "field_value": "553-CT 10/23",
+    "candidate_id": "paragraphs_cand_130",
+    "candidate_text": "LAW. 553-CT 10/23",
+    "similarity": 0.4571925103664398,
+    "human_review": true,
+    "metadata": {
+      "source": "paragraphs",
+      "role": "pageHeader",
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            2.817,
+            0.0494,
+            5.6713,
+            0.0515,
+            5.6711,
+            0.298,
+            2.8169,
+            0.2959
+          ]
+        }
+      ]
+    }
+  },
+  "metadata.page": {
+    "field_value": "8/23",
+    "candidate_id": "paragraphs_cand_131",
+    "candidate_text": "Pig. 8/23",
+    "similarity": 0.36699244379997253,
+    "human_review": true,
+    "metadata": {
+      "source": "paragraphs",
+      "role": "pageHeader",
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            7.0274,
+            0.5886,
+            7.4972,
+            0.5843,
+            7.4985,
+            0.729,
+            7.0288,
+            0.7333
+          ]
+        }
+      ]
+    }
+  },
+  "buyer_information.name": {
+    "field_value": "John Doe",
+    "candidate_id": "paragraphs_cand_307",
+    "candidate_text": "Buyer Printed Name",
+    "similarity": 0.5615454912185669,
+    "human_review": true,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            0.3706,
+            23.8665,
+            1.5577,
+            23.8605,
+            1.5585,
+            24.0208,
+            0.3714,
+            24.0268
+          ]
+        }
+      ]
+    }
+  },
+  "buyer_information.address": {
+    "field_value": "123 Main St, Springfield, IL 62701",
+    "candidate_id": "tables_cand_4",
+    "candidate_text": "Jane Doe, 123 Main St, Springfield, IL 62701 Cell:",
+    "similarity": 0.6066625118255615,
+    "human_review": false,
+    "metadata": {
+      "source": "tables",
+      "role": null
+    }
+  },
+  "buyer_information.phone": {
+    "field_value": "555-1234",
+    "candidate_id": "paragraphs_cand_282",
+    "candidate_text": "Buyer Signature",
+    "similarity": 0.5398569107055664,
+    "human_review": true,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            5.7146,
+            13.918,
+            6.4207,
+            13.9097,
+            6.4223,
+            14.0521,
+            5.7163,
+            14.0603
+          ]
+        }
+      ]
+    }
+  },
+  "buyer_information.email": {
+    "field_value": "johndoe@email.com",
+    "candidate_id": "tables_cand_8",
+    "candidate_text": "Email: johndoe@email.com",
+    "similarity": 0.7840632796287537,
+    "human_review": false,
+    "metadata": {
+      "source": "tables",
+      "role": null
+    }
+  },
+  "co_buyer_information.name": {
+    "field_value": "Jane Doe",
+    "candidate_id": "paragraphs_cand_307",
+    "candidate_text": "Buyer Printed Name",
+    "similarity": 0.5324081778526306,
+    "human_review": true,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            0.3706,
+            23.8665,
+            1.5577,
+            23.8605,
+            1.5585,
+            24.0208,
+            0.3714,
+            24.0268
+          ]
+        }
+      ]
+    }
+  },
+  "co_buyer_information.address": {
+    "field_value": "123 Main St, Springfield, IL 62701",
+    "candidate_id": "tables_cand_3",
+    "candidate_text": "John Doe 123 Main St, Springfield, IL 62701 Cell:555-1234",
+    "similarity": 0.5798157453536987,
+    "human_review": false,
+    "metadata": {
+      "source": "tables",
+      "role": null
+    }
+  },
+  "seller_creditor_information.name": {
+    "field_value": "ABC Motors",
+    "candidate_id": "tables_cand_2",
+    "candidate_text": "Seller-Creditor (Name and Address)",
+    "similarity": 0.6113215684890747,
+    "human_review": false,
+    "metadata": {
+      "source": "tables",
+      "role": "columnHeader"
+    }
+  },
+  "seller_creditor_information.address": {
+    "field_value": "456 Commerce Blvd, Springfield, IL 62701",
+    "candidate_id": "tables_cand_6",
+    "candidate_text": "456 Commerce Blvd, Springfield, IL",
+    "similarity": 0.6605165004730225,
+    "human_review": false,
+    "metadata": {
+      "source": "tables",
+      "role": null
+    }
+  },
+  "vehicle_information.new_used_demo": {
+    "field_value": "New",
+    "candidate_id": "tables_cand_10",
+    "candidate_text": "New/Used/Demo",
+    "similarity": 0.4431265890598297,
+    "human_review": true,
+    "metadata": {
+      "source": "tables",
+      "role": "columnHeader"
+    }
+  },
+  "vehicle_information.year": {
+    "field_value": "2024",
+    "candidate_id": "paragraphs_cand_147",
+    "candidate_text": "Vehicle Identification Number",
+    "similarity": 0.6886998414993286,
+    "human_review": false,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            3.5683,
+            2.8687,
+            5.7839,
+            2.8494,
+            5.7839,
+            3.0136,
+            3.5683,
+            3.0232
+          ]
+        }
+      ]
+    }
+  },
+  "vehicle_information.make_and_model": {
+    "field_value": "Toyota Camry",
+    "candidate_id": "tables_cand_17",
+    "candidate_text": "Toyota Camry",
+    "similarity": 0.6321800947189331,
+    "human_review": false,
+    "metadata": {
+      "source": "tables",
+      "role": null
+    }
+  },
+  "vehicle_information.vehicle_identification_number": {
+    "field_value": "1HGBH41JXMN109186",
+    "candidate_id": "tables_cand_13",
+    "candidate_text": "Vehicle Identification Number",
+    "similarity": 0.7810446619987488,
+    "human_review": false,
+    "metadata": {
+      "source": "tables",
+      "role": "columnHeader"
+    }
+  },
+  "vehicle_information.primary_use_for_which_purchased": {
+    "field_value": "Personal, family, or household use",
+    "candidate_id": "tables_cand_14",
+    "candidate_text": "Primary Use For Which Purchased",
+    "similarity": 0.5960310101509094,
+    "human_review": false,
+    "metadata": {
+      "source": "tables",
+      "role": "columnHeader"
+    }
+  },
+  "vehicle_information.primary_use_for_which_purchased_agricultural": {
+    "field_value": "False",
+    "candidate_id": "paragraphs_cand_148",
+    "candidate_text": "Primary Use For Which Purchased",
+    "similarity": 0.5937933921813965,
+    "human_review": false,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            5.7839,
+            2.8494,
+            8.18,
+            2.8494,
+            8.18,
+            3.0039,
+            5.7839,
+            3.0136
+          ]
+        }
+      ]
+    }
+  },
+  "finance_information.annual_percentage_rate": {
+    "field_value": "5.99%",
+    "candidate_id": "tables_cand_21",
+    "candidate_text": "ANNUAL PERCENTAGE\nThe cost of\nRATE\nyour credit as a yearly rate.",
+    "similarity": 0.564189076423645,
+    "human_review": false,
+    "metadata": {
+      "source": "tables",
+      "role": "columnHeader"
+    }
+  },
+  "finance_information.finance_charge": {
+    "field_value": "$3,500.00",
+    "candidate_id": "tables_cand_22",
+    "candidate_text": "FINANCE CHARGE The dollar amount the credit will cost you.",
+    "similarity": 0.5595397353172302,
+    "human_review": false,
+    "metadata": {
+      "source": "tables",
+      "role": "columnHeader"
+    }
+  },
+  "finance_information.amount_financed": {
+    "field_value": "$20,000.00",
+    "candidate_id": "paragraphs_cand_156",
+    "candidate_text": "FINANCE CHARGE The dollar amount the credit will cost you.",
+    "similarity": 0.5694712400436401,
+    "human_review": false,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            1.2624,
+            3.907,
+            2.3187,
+            3.8974,
+            2.3187,
+            4.9043,
+            1.2624,
+            4.9043
+          ]
+        }
+      ]
+    }
+  },
+  "finance_information.total_of_payments": {
+    "field_value": "$23,500.00",
+    "candidate_id": "paragraphs_cand_166",
+    "candidate_text": "Number of Payments",
+    "similarity": 0.6246529817581177,
+    "human_review": false,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            0.2319,
+            5.3175,
+            0.9275,
+            5.3175,
+            0.9275,
+            5.5862,
+            0.2319,
+            5.5862
+          ]
+        }
+      ]
+    }
+  },
+  "finance_information.total_sale_price": {
+    "field_value": "$25,000.00",
+    "candidate_id": "tables_cand_25",
+    "candidate_text": "Total Sale\nThe total cost of\nPrice\nyour purchase on credit, including your down payment of $ 25000 is",
+    "similarity": 0.5553675889968872,
+    "human_review": false,
+    "metadata": {
+      "source": "tables",
+      "role": "columnHeader"
+    }
+  },
+  "finance_information.monthly_payment": {
+    "field_value": "$391.67",
+    "candidate_id": "paragraphs_cand_167",
+    "candidate_text": "Amount of Payments",
+    "similarity": 0.616855800151825,
+    "human_review": false,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            0.9275,
+            5.3175,
+            1.9194,
+            5.3175,
+            1.9194,
+            5.5862,
+            0.9275,
+            5.5862
+          ]
+        }
+      ]
+    }
+  },
+  "finance_information.number_of_payments": {
+    "field_value": "60",
+    "candidate_id": "tables_cand_32",
+    "candidate_text": "Number of Payments",
+    "similarity": 0.7155821919441223,
+    "human_review": false,
+    "metadata": {
+      "source": "tables",
+      "role": "columnHeader"
+    }
+  },
+  "finance_information.first_payment_due": {
+    "field_value": "11/01/2024",
+    "candidate_id": "tables_cand_37",
+    "candidate_text": "Monthly beginning 11/01/2024",
+    "similarity": 0.5207968354225159,
+    "human_review": true,
+    "metadata": {
+      "source": "tables",
+      "role": null
+    }
+  },
+  "late_charge.days_after_due": {
+    "field_value": "10",
+    "candidate_id": "tables_cand_128",
+    "candidate_text": ":unselected: Assigned with limited recourse",
+    "similarity": 0.32900553941726685,
+    "human_review": true,
+    "metadata": {
+      "source": "tables",
+      "role": null
+    }
+  },
+  "late_charge.amount": {
+    "field_value": "$10.00",
+    "candidate_id": "paragraphs_cand_171",
+    "candidate_text": "Monthly beginning 11/01/2024",
+    "similarity": 0.3960925042629242,
+    "human_review": true,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            1.9194,
+            5.5862,
+            5.4877,
+            5.567,
+            5.4877,
+            5.8837,
+            1.9194,
+            5.8933
+          ]
+        }
+      ]
+    }
+  },
+  "late_charge.percent_of_payment": {
+    "field_value": "5%",
+    "candidate_id": "tables_cand_33",
+    "candidate_text": "Amount of Payments",
+    "similarity": 0.5355172157287598,
+    "human_review": true,
+    "metadata": {
+      "source": "tables",
+      "role": "columnHeader"
+    }
+  },
+  "prepayment.allowed": {
+    "field_value": "True",
+    "candidate_id": "paragraphs_cand_321",
+    "candidate_text": ":unselected: Assigned without recourse",
+    "similarity": 0.3739793002605438,
+    "human_review": true,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            2.9242,
+            25.1391,
+            5.8097,
+            25.112,
+            5.8097,
+            25.4464,
+            2.9242,
+            25.4735
+          ]
+        }
+      ]
+    }
+  },
+  "prepayment.penalty": {
+    "field_value": "False",
+    "candidate_id": "tables_cand_34",
+    "candidate_text": "When Payments Are Due",
+    "similarity": 0.3907316029071808,
+    "human_review": true,
+    "metadata": {
+      "source": "tables",
+      "role": "columnHeader"
+    }
+  },
+  "security_interest.description": {
+    "field_value": "You are giving a security interest in the vehicle being purchased.",
+    "candidate_id": "tables_cand_123",
+    "candidate_text": "Seler assigns its interest in this contract to",
+    "similarity": 0.3480537235736847,
+    "human_review": true,
+    "metadata": {
+      "source": "tables",
+      "role": "columnHeader"
+    }
+  },
+  "additional_information.description": {
+    "field_value": "See this contract for more information including information about nonpayment, default, any required repayment in full before the scheduled date and security interest.",
+    "candidate_id": "paragraphs_cand_174",
+    "candidate_text": "Security Interest. You are giving a security interest in the vehicle being purchased. Additional Information: See this contract for more information including information about nonpayment, default, any required repayment in full before the scheduled date and security interest.",
+    "similarity": 0.760903000831604,
+    "human_review": false,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            0.2827,
+            7.3009,
+            5.4388,
+            7.2796,
+            5.4409,
+            7.7702,
+            0.2847,
+            7.7915
+          ]
+        }
+      ]
+    }
+  },
+  "itemization_of_amount_financed.cash_price.amount_including_sales_tax": {
+    "field_value": "$",
+    "candidate_id": "paragraphs_cand_326",
+    "candidate_text": "ITEMIZATION OF AMOUNT FINANCED 1 Cash Price (including $ sales tax)",
+    "similarity": 0.9069436192512512,
+    "human_review": false,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            0.3117,
+            7.9635,
+            2.7663,
+            7.9547,
+            2.7675,
+            8.2869,
+            0.3129,
+            8.2958
+          ]
+        }
+      ]
+    }
+  },
+  "itemization_of_amount_financed.cash_price.other": {
+    "field_value": "$",
+    "candidate_id": "paragraphs_cand_328",
+    "candidate_text": "Term (Seller may keep part of these amounts):",
+    "similarity": 0.4674682915210724,
+    "human_review": true,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            0.4779,
+            10.6488,
+            7.9433,
+            10.5675,
+            7.9452,
+            10.7397,
+            0.4797,
+            10.821
+          ]
+        }
+      ]
+    }
+  },
+  "itemization_of_amount_financed.cash_price.total": {
+    "field_value": "$",
+    "candidate_id": "tables_cand_23",
+    "candidate_text": "Amount Financed The amount of credit provided to you or on your behalf.",
+    "similarity": 0.5026021599769592,
+    "human_review": true,
+    "metadata": {
+      "source": "tables",
+      "role": "columnHeader"
+    }
+  },
+  "itemization_of_amount_financed.total_downpayment.trade_in.year": {
+    "field_value": "2021",
+    "candidate_id": "tables_cand_69",
+    "candidate_text": "(If total downpayment is negative, enter \"0\" and see 41 below)",
+    "similarity": 0.5313712954521179,
+    "human_review": true,
+    "metadata": {
+      "source": "tables",
+      "role": null
+    }
+  },
+  "itemization_of_amount_financed.total_downpayment.trade_in.make": {
+    "field_value": "Honda Accord",
+    "candidate_id": "paragraphs_cand_178",
+    "candidate_text": "Honda Accord",
+    "similarity": 0.4635269343852997,
+    "human_review": true,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            1.5973,
+            8.623,
+            2.5764,
+            8.6046,
+            2.5764,
+            8.7518,
+            1.5973,
+            8.761
+          ]
+        }
+      ]
+    }
+  },
+  "itemization_of_amount_financed.total_downpayment.trade_in.gross_trade_in_allowance": {
+    "field_value": "$5000",
+    "candidate_id": "tables_cand_47",
+    "candidate_text": "Allowance",
+    "similarity": 0.3971194326877594,
+    "human_review": true,
+    "metadata": {
+      "source": "tables",
+      "role": "columnHeader"
+    }
+  },
+  "itemization_of_amount_financed.total_downpayment.trade_in.less_pay_off_made_by_seller_to": {
+    "field_value": "$3500",
+    "candidate_id": "tables_cand_24",
+    "candidate_text": "Total of\nThe amount you\nPayments\nwill have paid after you have made all payments as scheduled.",
+    "similarity": 0.418929785490036,
+    "human_review": true,
+    "metadata": {
+      "source": "tables",
+      "role": "columnHeader"
+    }
+  },
+  "itemization_of_amount_financed.total_downpayment.trade_in.equals_net_trade_in": {
+    "field_value": "$1500",
+    "candidate_id": "paragraphs_cand_191",
+    "candidate_text": "Net Trade In",
+    "similarity": 0.4288216233253479,
+    "human_review": true,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            1.095,
+            9.2761,
+            1.5973,
+            9.2761,
+            1.5973,
+            9.4693,
+            1.095,
+            9.4693
+          ]
+        }
+      ]
+    }
+  },
+  "itemization_of_amount_financed.total_downpayment.trade_in.cash": {
+    "field_value": "$1500",
+    "candidate_id": "tables_cand_39",
+    "candidate_text": "2 Total Downpayment =",
+    "similarity": 0.6433184742927551,
+    "human_review": false,
+    "metadata": {
+      "source": "tables",
+      "role": "columnHeader"
+    }
+  },
+  "itemization_of_amount_financed.total_downpayment.trade_in.other": {
+    "field_value": "$",
+    "candidate_id": "paragraphs_cand_175",
+    "candidate_text": "2 Total Downpayment =",
+    "similarity": 0.6546233296394348,
+    "human_review": false,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            0.2319,
+            8.439,
+            1.5845,
+            8.4298,
+            1.5973,
+            8.623,
+            0.2319,
+            8.6322
+          ]
+        }
+      ]
+    }
+  },
+  "itemization_of_amount_financed.total_downpayment.trade_in.other_amount": {
+    "field_value": "$",
+    "candidate_id": "paragraphs_cand_205",
+    "candidate_text": "(If total downpayment is negative, enter \"0\" and see 41 below)",
+    "similarity": 0.5488477945327759,
+    "human_review": true,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            0.2319,
+            10.0764,
+            3.6713,
+            10.0672,
+            3.6713,
+            10.2972,
+            0.2448,
+            10.3064
+          ]
+        }
+      ]
+    }
+  },
+  "itemization_of_amount_financed.total_downpayment.trade_in.total_downpayment": {
+    "field_value": "$2000",
+    "candidate_id": "paragraphs_cand_159",
+    "candidate_text": "Total Sale\nThe total cost of\nPrice\nyour purchase on credit, including your down payment of $ 25000 is",
+    "similarity": 0.43637338280677795,
+    "human_review": true,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            4.4185,
+            3.8782,
+            5.4619,
+            3.8782,
+            5.4619,
+            4.8947,
+            4.4185,
+            4.8947
+          ]
+        }
+      ]
+    }
+  },
+  "itemization_of_amount_financed.unpaid_balance_of_cash_price": {
+    "field_value": "$20000",
+    "candidate_id": "paragraphs_cand_208",
+    "candidate_text": "of Cash",
+    "similarity": 0.4602906107902527,
+    "human_review": true,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            1.095,
+            10.3064,
+            1.5973,
+            10.3064,
+            1.5973,
+            10.4812,
+            1.095,
+            10.4812
+          ]
+        }
+      ]
+    }
+  },
+  "itemization_of_amount_financed.other_charges_including_amounts_paid_to_others_on_your_behalf.optional_credit_insurance.credit_life": {
+    "field_value": "$100",
+    "candidate_id": "paragraphs_cand_212",
+    "candidate_text": "4 Other Charges Including Amounts Paid to Others on Your Behalf",
+    "similarity": 0.6406673192977905,
+    "human_review": false,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            0.2448,
+            10.4628,
+            3.6713,
+            10.4812,
+            3.6713,
+            10.6192,
+            0.2448,
+            10.6376
+          ]
+        }
+      ]
+    }
+  },
+  "itemization_of_amount_financed.other_charges_including_amounts_paid_to_others_on_your_behalf.optional_credit_insurance.disability": {
+    "field_value": "$",
+    "candidate_id": "tables_cand_122",
+    "candidate_text": "Total Other Charges and Amounts Paid to Others on Your Behalf",
+    "similarity": 0.6248862743377686,
+    "human_review": false,
+    "metadata": {
+      "source": "tables",
+      "role": null
+    }
+  },
+  "itemization_of_amount_financed.other_charges_including_amounts_paid_to_others_on_your_behalf.vendor_single_interest_insurance_paid_to_insurance_company": {
+    "field_value": "$",
+    "candidate_id": "tables_cand_84",
+    "candidate_text": "Vendor's Single Interest Insurance Paid to Insurance Company",
+    "similarity": 0.5916141271591187,
+    "human_review": false,
+    "metadata": {
+      "source": "tables",
+      "role": null
+    }
+  },
+  "itemization_of_amount_financed.other_charges_including_amounts_paid_to_others_on_your_behalf.other_optional_insurance_paid_to_insurance_company_or_companies": {
+    "field_value": "$",
+    "candidate_id": "paragraphs_cand_222",
+    "candidate_text": "Other Optional Insurance Paid to Insurance Company or Companies",
+    "similarity": 0.6140270233154297,
+    "human_review": false,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            0.5539,
+            11.4494,
+            3.8774,
+            11.4319,
+            3.8903,
+            11.5985,
+            0.5539,
+            11.6161
+          ]
+        }
+      ]
+    }
+  },
+  "itemization_of_amount_financed.other_charges_including_amounts_paid_to_others_on_your_behalf.optional_gap_contract": {
+    "field_value": "$200",
+    "candidate_id": "paragraphs_cand_157",
+    "candidate_text": "Amount Financed The amount of credit provided to you or on your behalf.",
+    "similarity": 0.5837592482566833,
+    "human_review": false,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            2.3187,
+            3.8974,
+            3.375,
+            3.8878,
+            3.375,
+            4.8947,
+            2.3187,
+            4.9043
+          ]
+        }
+      ]
+    }
+  },
+  "itemization_of_amount_financed.other_charges_including_amounts_paid_to_others_on_your_behalf.official_fees_paid_to_government_agencies.government_taxes_not_included_in_cash_price": {
+    "field_value": "$",
+    "candidate_id": "paragraphs_cand_226",
+    "candidate_text": "Official Fees Paid to Government Agencies",
+    "similarity": 0.49977222084999084,
+    "human_review": true,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            0.5539,
+            11.7739,
+            2.7696,
+            11.7652,
+            2.7696,
+            11.9318,
+            0.5539,
+            11.9493
+          ]
+        }
+      ]
+    }
+  },
+  "itemization_of_amount_financed.other_charges_including_amounts_paid_to_others_on_your_behalf.official_fees_paid_to_government_agencies.government_license_and_registration_fees": {
+    "field_value": "$",
+    "candidate_id": "tables_cand_90",
+    "candidate_text": "Official Fees Paid to Government Agencies",
+    "similarity": 0.5304306745529175,
+    "human_review": true,
+    "metadata": {
+      "source": "tables",
+      "role": null
+    }
+  },
+  "itemization_of_amount_financed.other_charges_including_amounts_paid_to_others_on_your_behalf.other_charges.for_prior_credit_or_lease_balance": {
+    "field_value": "$",
+    "candidate_id": "tables_cand_97",
+    "candidate_text": "for Prior Credit or Lease Balance",
+    "similarity": 0.5490796566009521,
+    "human_review": true,
+    "metadata": {
+      "source": "tables",
+      "role": "columnHeader"
+    }
+  },
+  "itemization_of_amount_financed.other_charges_including_amounts_paid_to_others_on_your_behalf.other_charges.for": {
+    "field_value": "$",
+    "candidate_id": "tables_cand_76",
+    "candidate_text": "4 Other Charges Including Amounts Paid to Others on Your Behalf",
+    "similarity": 0.7241871356964111,
+    "human_review": false,
+    "metadata": {
+      "source": "tables",
+      "role": null
+    }
+  },
+  "itemization_of_amount_financed.other_charges_including_amounts_paid_to_others_on_your_behalf.other_charges.total_other_charges_and_amounts_paid_to_others_on_your_behalf": {
+    "field_value": "$20300",
+    "candidate_id": "paragraphs_cand_258",
+    "candidate_text": "Total Other Charges and Amounts Paid to Others on Your Behalf",
+    "similarity": 0.5984367728233337,
+    "human_review": false,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            0.5539,
+            15.6221,
+            3.8388,
+            15.6042,
+            3.8388,
+            15.7649,
+            0.5539,
+            15.7917
+          ]
+        }
+      ]
+    }
+  },
+  "itemization_of_amount_financed.amount_financed": {
+    "field_value": "$20300",
+    "candidate_id": "paragraphs_cand_352",
+    "candidate_text": "5 Amount Financed (3 + 4)",
+    "similarity": 0.6342513561248779,
+    "human_review": false,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            0.3534,
+            15.8266,
+            1.5711,
+            15.818,
+            1.5721,
+            15.9675,
+            0.3545,
+            15.9761
+          ]
+        }
+      ]
+    }
+  },
+  "option.description": {
+    "field_value": "You pay no finance charge if the Amount Financed, item 5, is paid in full on or before ________________, Year ________________.",
+    "candidate_id": "paragraphs_cand_259",
+    "candidate_text": "OPTION: :unselected: You pay no finance charge if the Amount Financed, item 5, is paid in full on or before",
+    "similarity": 0.7419751882553101,
+    "human_review": false,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            0.3124,
+            16.1732,
+            5.4882,
+            16.1368,
+            5.4893,
+            16.2996,
+            0.3135,
+            16.336
+          ]
+        }
+      ]
+    }
+  },
+  "insurance.credit_life_insurance_company_name": {
+    "field_value": "XYZ Insurance",
+    "candidate_id": "paragraphs_cand_266",
+    "candidate_text": "Insurance Company Name YZ Insurance",
+    "similarity": 0.8038890957832336,
+    "human_review": false,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            5.6868,
+            6.5594,
+            7.4859,
+            6.5529,
+            7.4866,
+            6.7508,
+            5.6875,
+            6.7573
+          ]
+        }
+      ]
+    }
+  },
+  "insurance.home_office_address": {
+    "field_value": "789 Insurance Ln, Springfield, IL 62701",
+    "candidate_id": "paragraphs_cand_267",
+    "candidate_text": "Home Office Address 789 Insurance Ln, Springfield, IL 62701",
+    "similarity": 0.9970438480377197,
+    "human_review": false,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            5.6932,
+            6.9286,
+            8.1864,
+            6.9301,
+            8.1863,
+            7.1881,
+            5.693,
+            7.1866
+          ]
+        }
+      ]
+    }
+  },
+  "insurance.optional_credit_insurance.credit_life": {
+    "field_value": "True",
+    "candidate_id": "paragraphs_cand_263",
+    "candidate_text": "Check the insurance you want and sign below: Optional Credit Insurance :selected:",
+    "similarity": 0.5777980089187622,
+    "human_review": false,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            5.8679,
+            5.4176,
+            8.0107,
+            5.4159,
+            8.0111,
+            5.9011,
+            5.8682,
+            5.9028
+          ]
+        }
+      ]
+    }
+  },
+  "insurance.optional_credit_insurance.credit_disability": {
+    "field_value": "True",
+    "candidate_id": "tables_cand_78",
+    "candidate_text": "Cost of Optional Credit Insurance Paid to Insurance Company or Companies.",
+    "similarity": 0.5270755290985107,
+    "human_review": true,
+    "metadata": {
+      "source": "tables",
+      "role": "columnHeader"
+    }
+  },
+  "insurance.optional_credit_insurance.credit_life_and_credit_disability": {
+    "field_value": "False",
+    "candidate_id": "paragraphs_cand_262",
+    "candidate_text": "If any insurance is checked below, policies or certificates from the named insurance companies will describe the terms and conditions.",
+    "similarity": 0.49766162037849426,
+    "human_review": true,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            5.6885,
+            4.9266,
+            8.1961,
+            4.9194,
+            8.1972,
+            5.3177,
+            5.6897,
+            5.3248
+          ]
+        }
+      ]
+    }
+  },
+  "insurance.optional_credit_insurance.cost": {
+    "field_value": "$73.65",
+    "candidate_id": "paragraphs_cand_214",
+    "candidate_text": "Cost of Optional Credit Insurance Paid to Insurance Company or Companies.",
+    "similarity": 0.5648294687271118,
+    "human_review": false,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            0.5539,
+            10.7653,
+            3.8774,
+            10.739,
+            3.8774,
+            10.9407,
+            0.5539,
+            10.9671
+          ]
+        }
+      ]
+    }
+  },
+  "insurance.other_optional_insurance.premium": {
+    "field_value": "$",
+    "candidate_id": "tables_cand_86",
+    "candidate_text": "Other Optional Insurance Paid to Insurance Company or Companies",
+    "similarity": 0.6216106414794922,
+    "human_review": false,
+    "metadata": {
+      "source": "tables",
+      "role": null
+    }
+  },
+  "returned_payment_charge.charge_amount": {
+    "field_value": "$20",
+    "candidate_id": "paragraphs_cand_168",
+    "candidate_text": "When Payments Are Due",
+    "similarity": 0.4746900498867035,
+    "human_review": true,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            1.9194,
+            5.3175,
+            5.4877,
+            5.2983,
+            5.4877,
+            5.567,
+            1.9194,
+            5.5862
+          ]
+        }
+      ]
+    }
+  },
+  "returned_payment_charge.description": {
+    "field_value": "If the cash price of the vehicle is more than $75,000.00, you agree to pay a charge of $20 if any check you give us is dishonored or any electronic payment is returned unpaid.",
+    "candidate_id": "paragraphs_cand_288",
+    "candidate_text": "Returned Payment Charge: If the cash price of the vehicle is more than $75,000, you agree to pay a charge of $_20 if any check you give us is dishonored or any electronic payment is returned unpaid.",
+    "similarity": 0.9456027746200562,
+    "human_review": false,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            5.7161,
+            15.6298,
+            8.2472,
+            15.6263,
+            8.2483,
+            16.4551,
+            5.7173,
+            16.4586
+          ]
+        }
+      ]
+    }
+  },
+  "buyer_signature.buyer_signature": {
+    "field_value": "X",
+    "candidate_id": "paragraphs_cand_282",
+    "candidate_text": "Buyer Signature",
+    "similarity": 0.7119531631469727,
+    "human_review": false,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            5.7146,
+            13.918,
+            6.4207,
+            13.9097,
+            6.4223,
+            14.0521,
+            5.7163,
+            14.0603
+          ]
+        }
+      ]
+    }
+  },
+  "buyer_signature.co_buyer_signature": {
+    "field_value": "X",
+    "candidate_id": "paragraphs_cand_298",
+    "candidate_text": "Buyer Signs X",
+    "similarity": 0.5649409294128418,
+    "human_review": false,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            0.3438,
+            20.5353,
+            0.9631,
+            20.5281,
+            0.9649,
+            20.6797,
+            0.3456,
+            20.6869
+          ]
+        }
+      ]
+    }
+  },
+  "buyer_signature_gap_contract.buyer_signature": {
+    "field_value": "X",
+    "candidate_id": "paragraphs_cand_296",
+    "candidate_text": "Name of Gap Contract",
+    "similarity": 0.47537171840667725,
+    "human_review": true,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            5.6931,
+            20.0725,
+            6.6272,
+            20.0692,
+            6.6278,
+            20.2191,
+            5.6937,
+            20.2224
+          ]
+        }
+      ]
+    }
+  },
+  "additional_terms.annual_percentage_rate_negotiable": {
+    "field_value": "True",
+    "candidate_id": "paragraphs_cand_299",
+    "candidate_text": "The Annual Percentage Rate may be negotiable with the Seller. The Seller may assign this contract and retain its right to receive a part of the Finance Charge.",
+    "similarity": 0.47344204783439636,
+    "human_review": true,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            0.3653,
+            20.8318,
+            8.2416,
+            20.7674,
+            8.2446,
+            21.1357,
+            0.3683,
+            21.2001
+          ]
+        }
+      ]
+    }
+  },
+  "additional_terms.seller_may_assign_contract": {
+    "field_value": "True",
+    "candidate_id": "tables_cand_125",
+    "candidate_text": "under the terms of Seller's agreement(s) with Assignee.",
+    "similarity": 0.515265703201294,
+    "human_review": true,
+    "metadata": {
+      "source": "tables",
+      "role": "columnHeader"
+    }
+  },
+  "additional_terms.seller_retains_interest": {
+    "field_value": "True",
+    "candidate_id": "paragraphs_cand_319",
+    "candidate_text": "under the terms of Seller's agreement(s) with Assignee.",
+    "similarity": 0.38747942447662354,
+    "human_review": true,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            5.8097,
+            24.9403,
+            8.3732,
+            24.9132,
+            8.3732,
+            25.0849,
+            5.8097,
+            25.112
+          ]
+        }
+      ]
+    }
+  },
+  "change_of_contract_terms.buyer_signature": {
+    "field_value": "X",
+    "candidate_id": "paragraphs_cand_285",
+    "candidate_text": "Co-Buyer Signature",
+    "similarity": 0.5919144153594971,
+    "human_review": false,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            5.7285,
+            14.4233,
+            6.5722,
+            14.4194,
+            6.5729,
+            14.5597,
+            5.7292,
+            14.5635
+          ]
+        }
+      ]
+    }
+  },
+  "change_of_contract_terms.co_buyer_signature": {
+    "field_value": "X",
+    "candidate_id": "tables_cand_126",
+    "candidate_text": ":unselected: Assigned with recourse Seller",
+    "similarity": 0.45439887046813965,
+    "human_review": true,
+    "metadata": {
+      "source": "tables",
+      "role": null
+    }
+  },
+  "important_agreements.agreement_1": {
+    "field_value": "You agree to the terms of this contract. You confirm that before you signed this contract, we gave it to you, and you were free to take it and review it. You confirm that you received a true and completely filled-in copy when you signed it.",
+    "candidate_id": "paragraphs_cand_302",
+    "candidate_text": "You agree to the terms of this contract. You confirm that before you signed this contract, we gave it to you, and you were free to take it and review it. You confirm that you received a true and completely filled-in copy when you signed it.",
+    "similarity": 0.45789188146591187,
+    "human_review": true,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            0.3554,
+            22.2594,
+            8.2677,
+            22.1965,
+            8.2705,
+            22.5516,
+            0.3582,
+            22.6145
+          ]
+        }
+      ]
+    }
+  },
+  "important_agreements.agreement_2": {
+    "field_value": "NOTICE TO THE BUYER: 1. Do not sign this contract before you read it or if it contains any blank space. 2. You are entitled to a completely filled-in copy of the contract when you sign it. 3. Under the law, you have the following rights, among others: (a) to pay off in advance the full amount due and obtain a partial refund of any unearned finance charge; (b) to refinance the amount financed on this contract; (c) to require, under certain conditions, a resale of the property if repossessed.",
+    "candidate_id": "paragraphs_cand_303",
+    "candidate_text": "NOTICE TO THE BUYER: 1. Do not sign this contract before you read it or if it contains any blank space. 2. You are entitled to a completely filled-in copy of the contract when you sign it. 3. Under the law, you have the following rights, among others: (a) To pay off in advance the full amount due and obtain a partial refund of any unearned finance charge; (b) to redeem the property if repossessed for a default; (c) to require, under certain conditions, a resale of the property if repossessed.",
+    "similarity": 0.5392050743103027,
+    "human_review": true,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            0.3534,
+            22.6595,
+            8.2833,
+            22.5939,
+            8.2891,
+            23.2959,
+            0.3592,
+            23.3615
+          ]
+        }
+      ]
+    }
+  },
+  "buyer_information_secondary.buyer_signature": {
+    "field_value": "X",
+    "candidate_id": "paragraphs_cand_292",
+    "candidate_text": "Buyer Signs X Co-Buyer Signs X.",
+    "similarity": 0.5786656141281128,
+    "human_review": false,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            0.3267,
+            18.1746,
+            5.4227,
+            18.1332,
+            5.4241,
+            18.3124,
+            0.3282,
+            18.3539
+          ]
+        }
+      ]
+    }
+  },
+  "buyer_information_secondary.co_buyer_signature": {
+    "field_value": "X",
+    "candidate_id": "paragraphs_cand_304",
+    "candidate_text": "Buyer Signs X",
+    "similarity": 0.45440423488616943,
+    "human_review": true,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            0.3607,
+            23.6988,
+            1.2403,
+            23.6645,
+            1.2474,
+            23.8457,
+            0.3677,
+            23.88
+          ]
+        }
+      ]
+    }
+  },
+  "buyer_information_secondary.co_buyers_and_other_owners.description": {
+    "field_value": "A co-buyer is a person who is responsible for paying the entire debt. An other owner is a person whose name is on the title to the vehicle but does not have to pay the debt. The other owner agrees to the security interest in the vehicle given to us in this contract.",
+    "candidate_id": "paragraphs_cand_311",
+    "candidate_text": "Co-Buyers and Other Owners - A co-buyer is a person who is responsible for paying the entire debt. An other owner is a person whose name is on the title to the vehicle but does not have to pay the debt. The other owner agrees to the security interest in the vehicle given to us in this contract.",
+    "similarity": 0.45232656598091125,
+    "human_review": true,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            0.3659,
+            24.2335,
+            8.2914,
+            24.1599,
+            8.294,
+            24.4474,
+            0.3686,
+            24.521
+          ]
+        }
+      ]
+    }
+  },
+  "buyer_information_secondary.co_buyers_and_other_owners.other_owner_signature": {
+    "field_value": "X",
+    "candidate_id": "paragraphs_cand_312",
+    "candidate_text": "Other owner signs here X",
+    "similarity": 0.47454288601875305,
+    "human_review": true,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            0.3694,
+            24.5595,
+            1.5675,
+            24.5097,
+            1.5748,
+            24.6846,
+            0.3766,
+            24.7344
+          ]
+        }
+      ]
+    }
+  },
+  "buyer_information_secondary.seller_signature.signature": {
+    "field_value": "X",
+    "candidate_id": "paragraphs_cand_314",
+    "candidate_text": "Seller signs",
+    "similarity": 0.43422651290893555,
+    "human_review": true,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            0.3697,
+            24.7199,
+            0.8852,
+            24.7203,
+            0.8851,
+            24.8679,
+            0.3696,
+            24.8674
+          ]
+        }
+      ]
+    }
+  },
+  "assignee_information.assigned_without_recourse": {
+    "field_value": "True",
+    "candidate_id": "tables_cand_127",
+    "candidate_text": ":unselected: Assigned without recourse",
+    "similarity": 0.656829833984375,
+    "human_review": false,
+    "metadata": {
+      "source": "tables",
+      "role": null
+    }
+  },
+  "assignee_information.assigned_with_limited_recourse": {
+    "field_value": "False",
+    "candidate_id": "paragraphs_cand_322",
+    "candidate_text": ":unselected: Assigned with limited recourse",
+    "similarity": 0.694119930267334,
+    "human_review": false,
+    "metadata": {
+      "source": "paragraphs",
+      "role": null,
+      "boundingRegions": [
+        {
+          "pageNumber": 1,
+          "polygon": [
+            5.8097,
+            25.112,
+            8.3732,
+            25.0849,
+            8.3732,
+            25.4193,
+            5.8097,
+            25.4464
+          ]
+        }
+      ]
+    }
+  },
+  "assignee_information.seller_signature": {
+    "field_value": "X",
+    "candidate_id": "tables_cand_124",
+    "candidate_text": "(Assignee)",
+    "similarity": 0.474056601524353,
+    "human_review": true,
+    "metadata": {
+      "source": "tables",
+      "role": "columnHeader"
+    }
+  }
+}
